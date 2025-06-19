@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import swedenFlag from '../../assets/swedenFlag.png';
-import Logo from '../../assets/Logo1.svg';
+import Logo from '../../assets/Logotyp3.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
