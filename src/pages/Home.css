@@ -12,6 +12,8 @@
 
 .hero-section:first-child {
   margin-top: var(--header-height);
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image {
@@ -72,13 +74,27 @@
   position: relative;
   margin: 0;
   background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section-2::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/heroimg2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: -1;
 }
 
 .hero-section-2 .hero-image {
@@ -100,7 +116,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 2em;
+  position: relative;
 }
 
 .hero2-textblock .slick-slider,
@@ -186,15 +204,19 @@
     font-size: 15px;
   }
   .hero-section-2 {
-    min-height: 70vh;
+    padding: 40px 0;
   }
+  
+  .hero-section-2::before {
+    position: fixed;
+    background-position: 60% center;
+  }
+
   .hero2-textblock {
-    padding: 6vw 15px;
+    gap: 1.5em;
+    padding: 30px 20px;
   }
-  .hero2-textblock .slick-slider {
-    min-height: 220px;
-    height: 220px;
-  }
+
   .hero2-quote {
     font-size: 1rem;
     max-width: 98vw;
@@ -220,19 +242,23 @@
     font-size: 13px;
   }
   .hero-section-2 {
-    min-height: 80vh;
+    padding: 30px 0;
   }
+
+  .hero-section-2::before {
+    background-position: 65% center;
+  }
+
   .hero2-textblock {
-    padding: 8vw 10px;
+    gap: 1.2em;
+    padding: 20px 15px;
   }
-  .hero2-textblock .slick-slider {
-    min-height: 160px;
-    height: 160px;
-  }
+
   .hero2-quote {
     font-size: 0.95rem;
     max-width: 98vw;
     padding: 0.1em 0.2em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
   }
 }
 
