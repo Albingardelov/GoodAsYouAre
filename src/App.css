@@ -14,17 +14,21 @@ body {
   background-color: #ffffff;
 }
 
-.App {
+:root {
+  --header-height: 60px;
+}
+
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Main content */
-.main-content {
+main {
   flex: 1;
-  margin-top: 70px; /* Account for fixed header */
-  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  margin-top: var(--header-height);
 }
 
 .container {
@@ -35,9 +39,8 @@ body {
 
 /* Responsive container */
 @media (max-width: 768px) {
-  .main-content {
-    margin-top: 70px;
-    padding: 15px 0;
+  :root {
+    --header-height: 50px;
   }
   
   .container {
@@ -45,9 +48,15 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  :root {
+    --header-height: 45px;
+  }
+}
+
 @media (max-width: 480px) {
-  .main-content {
-    padding: 10px 0;
+  :root {
+    --header-height: 40px;
   }
   
   .container {

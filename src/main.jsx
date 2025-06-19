@@ -6,6 +6,7 @@ import App from './App.jsx'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './pages/Home.jsx'
+import AboutMe from './pages/AboutMe.jsx'
 // importera fler sidor här vid behov
 
 const router = createHashRouter([
@@ -16,6 +17,10 @@ const router = createHashRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path: '/about-me',
+        Component: AboutMe
       },
       // fler routes här
     ]
