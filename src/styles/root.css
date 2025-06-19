@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #000;
+  --color-text: #fffff0;
+  --color-accent: #d4b892;
+  --color-footer-link: #bdbdbd;
+  --font-main: 'Arial', sans-serif;
+  --font-logo: 'Shadows Into Light', cursive;
+  --header-height: 90px;
+  --footer-logo-size: 2.2rem;
+  --footer-link-size: 1.3rem;
+} 
