@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import swedenFlag from '../../assets/swedenFlag.png';
 import Logo from '../../assets/Logo1.svg';
@@ -14,7 +15,9 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src={Logo} alt="Good As You Are" className="logo-image" />
+          <Link to="/" className="logo-link">
+            <img src={Logo} alt="Good As You Are" className="logo-image" />
+          </Link>
         </div>
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
